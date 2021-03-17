@@ -8,9 +8,11 @@
         <div id="first_okay"></div>
         <script>
             var dday = new Date("20:20:00").getTime();
+            var now = new Date(); //현재시간을 구한다. 
+            var end = new Date(now.getFullYear(),now.getMonth(),now.getDate(),20,20,00).getTime();
             setInterval(function(){
                 var today = new Date().getTime();
-                var gap = dday - today;
+                var gap = end - today;
                 var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
                 var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));

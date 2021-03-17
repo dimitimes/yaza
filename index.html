@@ -16,4 +16,64 @@
         </style>
     </head>
     <body>
-        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a style="color: black;">We </a>
+         <a style="color: rgb(244, 11, 126);">Love </a>
+         <a style="color: gray;">허관무 티쳐</a>
+         <br>
+
+         <a style="color: black;">This time is </a>
+         <a style="color: rgb(244, 11, 126);">조회 </a>
+         <a style="color: gray;">with 허관무 티쳐</a>
+         <br>
+ <script>
+     setTimeout(function(){
+         location.reload();
+    },60000);
+    var now = new Date(); //현재시간을 구한다.
+    var d = now.getDate()
+    var m = now.getMonth()
+    var y = now.getFullYear()
+    m = m + 1;
+    if (m < 10) {
+  	m = "0" + m;
+    }
+  
+    if (d < 10) {
+  	d = "0" + d;
+    }
+var firsts = m + "/" + d + "/" + y + " " + "08:20 PM"
+var second = m + "/" + d + "/" + y + " " + "09:10 PM"
+var third = m + "/" + d + "/" + y + " " + "10:00 PM"
+CountDownTimer(firsts, 'first_okay');
+CountDownTimer(second, 'first_fin');
+CountDownTimer(third, 'second_fin');
+function CountDownTimer(dt, id)
+{
+var end = new Date(dt);
+var _second = 1000;
+var _minute = _second * 60;
+var _hour = _minute * 60;
+var _day = _hour * 24;
+var timer;
+function showRemaining() {
+var now = new Date();
+var distance = end - now;
+if (distance < 0) {
+clearInterval(timer);
+document.getElementById(id).innerHTML = '완료된 타이머입니다.';
+return;
+}
+var days = Math.floor(distance / _day);
+var hours = Math.floor((distance % _day) / _hour);
+var minutes = Math.floor((distance % _hour) / _minute);
+var seconds = Math.floor((distance % _minute) / _second);
+document.getElementById(id).innerHTML = hours + '시간 ';
+document.getElementById(id).innerHTML += minutes + '분 ';
+document.getElementById(id).innerHTML += seconds + '초';
+}
+timer = setInterval(showRemaining, 1000);
+}
+</script>
+    </body>
+</html>

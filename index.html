@@ -24,16 +24,16 @@
         <div>1차 야자 종료 시간까지</div>
         <div id="first_fin"></div>
         <script>
-            var now = new Date(); //현재시간을 구한다. 
-            var end = new Date(now.getFullYear(),now.getMonth(),now.getDate(),21,10,00).getTime();
+            var _now = new Date(); //현재시간을 구한다. 
+            var _end = new Date(_now.getFullYear(),_now.getMonth(),_now.getDate(),21,10,00).getTime();
             setInterval(function(){
-                var today = new Date().getTime();
-                var gap = end - today;
-                var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
-                var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
-                var sec = Math.ceil((gap % (1000 * 60)) / 1000);
-                document.getElementById("first_fin").innerHTML = hour + "시간 " + min + "분 " + sec + "초";
+                var _today = new Date().getTime();
+                var _gap = _end - _today;
+                var _day = Math.ceil(_gap / (1000 * 60 * 60 * 24));
+                var _hour = Math.ceil((_gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var _min = Math.ceil((_gap % (1000 * 60 * 60)) / (1000 * 60));
+                var _sec = Math.ceil((_gap % (1000 * 60)) / 1000);
+                document.getElementById("first_fin").innerHTML = _hour + "시간 " + _min + "분 " + _sec + "초";
             }, 1000);
         </script>
         <div>남았습니다</div>
@@ -41,16 +41,16 @@
         <div>2차 야자 종료 시간까지</div>
         <div id="second_fin"></div>
         <script>
-            var now = new Date(); //현재시간을 구한다. 
-            var end = new Date(now.getFullYear(),now.getMonth(),now.getDate(),22,00,00).getTime();
+            var snow = new Date(); //현재시간을 구한다. 
+            var send = new Date(snow.getFullYear(),snow.getMonth(),snow.getDate(),22,00,00).getTime();
             setInterval(function(){
-                var today = new Date().getTime();
-                var gap = end - today;
-                var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
-                var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
-                var sec = Math.ceil((gap % (1000 * 60)) / 1000);
-                document.getElementById("second_fin").innerHTML = hour + "시간 " + min + "분 " + sec + "초";
+                var stoday = new Date().getTime();
+                var sgap = send - stoday;
+                var sday = Math.ceil(sgap / (1000 * 60 * 60 * 24));
+                var shour = Math.ceil((sgap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var smin = Math.ceil((sgap % (1000 * 60 * 60)) / (1000 * 60));
+                var ssec = Math.ceil((sgap % (1000 * 60)) / 1000);
+                document.getElementById("second_fin").innerHTML = shour + "시간 " + smin + "분 " + ssec + "초";
             }, 1000);
         </script>
         <div>남았습니다</div>

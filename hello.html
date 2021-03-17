@@ -1,6 +1,16 @@
 <div id="hi"></div>
 <script>
-    var now = new Date(); //현재시간을 구한다. 
-    var firsts = now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear() + " " + "08:20 PM"
+    var now = new Date(); //현재시간을 구한다.
+    var d = now.getDate()
+    var m = now.getMonth()
+    var y = now.getFullYear()
+    if (m < 10) {
+  	m = "0" + m;
+    }
+  
+    if (d < 10) {
+  	d = "0" + d;
+    }
+    var firsts = m + "/" + d + "/" + y + " " + "08:20 PM"
     document.getElementById("hi").innerHTML = firsts;
 </script>

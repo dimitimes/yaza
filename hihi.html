@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>YaZa Timer</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Noto+Sans+KR:wght@900&display=swap');
+            body {
+                text-align: center;
+            }
+            div {
+                text-align: center;
+                font-size: 50px;
+                font-family: 'Noto Sans KR', sans-serif;
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <div style="color: black; font-size: 25px;">1차 야자 외출 시간까지</div>
+        <div style="color: rgb(244, 11, 126);" id="first_okay"></div>
+        <div style="color: gray; font-size: 25px;">남았습니다</div>
+        <br>
+        <div style="color: black; font-size: 25px;">1차 야자 종료 시간까지</div>
+        <div style="color: rgb(244, 11, 126);" id="first_fin"></div>
+        <div style="color: gray; font-size: 25px;">남았습니다</div>
+        <br>
+        <div style="color: black; font-size: 25px;">2차 야자 종료 시간까지</div>
+        <div style="color: rgb(244, 11, 126);" id="second_fin"></div>
+        <div style="color: gray; font-size: 25px;">남았습니다</div>
+
+<script>
+    setTimeout(function(){
+        location.reload();
+    },60000);
+
+    var now = new Date(); //현재시간을 구한다.
+    var d = now.getDate()
+    var m = now.getMonth()
+    var y = now.getFullYear()
+    m = m + 1;
+    if (m < 10) {
+  	m = "0" + m;
+    }
+  
+    if (d < 10) {
+  	d = "0" + d;
+    }
+var firsts = m + "/" + d + "/" + y + " " + "08:20 PM"
+var second = m + "/" + d + "/" + y + " " + "09:10 PM"
+var third = m + "/" + d + "/" + y + " " + "10:00 PM"
+
+CountDownTimer(firsts, 'first_okay');
+CountDownTimer(second, 'first_fin');
+CountDownTimer(third, 'second_fin');
+
+function CountDownTimer(dt, id)
+{
+var end = new Date(dt);
+
+var _second = 1000;
+var _minute = _second * 60;
+var _hour = _minute * 60;
+var _day = _hour * 24;
+var timer;
+
+function showRemaining() {
+var now = new Date();
+var distance = end - now;
+if (distance < 0) {
+
+clearInterval(timer);
+document.getElementById(id).innerHTML = '완료된 타이머입니다.';
+
+return;
+}
+var days = Math.floor(distance / _day);
+var hours = Math.floor((distance % _day) / _hour);
+var minutes = Math.floor((distance % _hour) / _minute);
+var seconds = Math.floor((distance % _minute) / _second);
+
+document.getElementById(id).innerHTML = hours + '시간 ';
+document.getElementById(id).innerHTML += minutes + '분 ';
+document.getElementById(id).innerHTML += seconds + '초';
+}
+
+timer = setInterval(showRemaining, 1000);
+}
+</script>
+
+    </body>
+</html>

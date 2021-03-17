@@ -4,7 +4,7 @@
         <title>YaZa Timer</title>
     </head>
     <body>
-        <div>1차 야자 외출 가능 시간까지</div>
+        <div>1차 야자 외출 시간까지</div>
         <div id="first_okay"></div>
         <div>남았습니다</div>
         <br>
@@ -19,11 +19,13 @@
 <script>
 
 var now = new Date(); //현재시간을 구한다. 
-var end = new Date(now.getFullYear(),now.getMonth(),now.getDate(),20,20,00).getTime();
+var firsts = now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear() + " " + "08:20 PM")
+var second = now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear() + " " + "09:10 PM")
+var third = now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear() + " " + "10:00 PM")
 
-CountDownTimer('03/17/2021 08:20 PM', 'first_okay');
-CountDownTimer('03/17/2021 09:10 PM', 'first_fin');
-CountDownTimer('03/17/2021 10:00 PM', 'second_fin');
+CountDownTimer(first, 'first_okay');
+CountDownTimer(second, 'first_fin');
+CountDownTimer(third, 'second_fin');
 
 function CountDownTimer(dt, id)
 {
@@ -41,7 +43,7 @@ var distance = end - now;
 if (distance < 0) {
 
 clearInterval(timer);
-document.getElementById(id).innerHTML = 'EXPIRED!';
+document.getElementById(id).innerHTML = '완료된 타이머입니다.';
 
 return;
 }

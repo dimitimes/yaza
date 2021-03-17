@@ -18,10 +18,20 @@
 
 <script>
 
-var now = new Date(); //현재시간을 구한다. 
-var firsts = now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear() + " " + "08:20 PM"
-var second = now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear() + " " + "09:10 PM"
-var third = now.getMonth() + "/" + now.getDate() + "/" + now.getFullYear() + " " + "10:00 PM"
+    var now = new Date(); //현재시간을 구한다.
+    var d = now.getDate()
+    var m = now.getMonth()
+    var y = now.getFullYear()
+    if (m < 10) {
+  	m = "0" + m;
+    }
+  
+    if (d < 10) {
+  	d = "0" + d;
+    }
+var firsts = m + "/" + d + "/" + y + " " + "08:20 PM"
+var second = m + "/" + d + "/" + y + " " + "09:10 PM"
+var third = m + "/" + d + "/" + y + " " + "10:00 PM"
 
 CountDownTimer(firsts, 'first_okay');
 CountDownTimer(second, 'first_fin');

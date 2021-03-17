@@ -18,13 +18,15 @@
     <body>
         <br><br><br><br><br><br><br><br>
          <a style="color: rgb(150, 150, 150);">This time is </a>
-         <a style="color: rgb(244, 11, 126); font-size: 80px;">사회를 빙자한 철학</a>
+         <a id="subj" style="color: rgb(244, 11, 126); font-size: 80px;">사회</a>
          <br>
          <a style="color: rgb(150, 150, 150);">with </a>
          <a style="color: black; font-size: 70px;">제제 </a>
          <a style="color: rgb(150, 150, 150);">teacher</a>
  <script>
-     setTimeout(function(){
+    setInterval(function() { document.getElementById("subj").innerHTML = '철학'; }, 100);
+    setInterval(function() { document.getElementById("subj").innerHTML = '사회'; }, 50);
+    setTimeout(function(){
          location.reload();
     },60000);
     var now = new Date(); //현재시간을 구한다.

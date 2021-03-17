@@ -18,6 +18,9 @@
 
 <script>
 
+var now = new Date(); //현재시간을 구한다. 
+var end = new Date(now.getFullYear(),now.getMonth(),now.getDate(),20,20,00).getTime();
+
 CountDownTimer('03/17/2021 08:20 PM', 'first_okay');
 CountDownTimer('03/17/2021 09:10 PM', 'first_fin');
 CountDownTimer('03/17/2021 10:00 PM', 'second_fin');

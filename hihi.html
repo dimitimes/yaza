@@ -16,6 +16,7 @@
         </style>
     </head>
     <body>
+<br><br>
         <div style="color: black; font-size: 25px;">1차 야자 시작 시간까지</div>
         <div style="color: rgb(244, 11, 126);" id="first_start"></div>
         <div style="color: gray; font-size: 25px;">남았습니다</div>
@@ -27,7 +28,7 @@
         <div style="color: black; font-size: 25px;">1차 야자 종료 시간까지</div>
         <div style="color: rgb(244, 11, 126);" id="first_fin"></div>
         <div style="color: gray; font-size: 25px;">남았습니다</div>
-        <br>
+        <br><br><br><br>
         <div style="color: black; font-size: 25px;">2차 야자 종료 시간까지</div>
         <div style="color: rgb(244, 11, 126);" id="second_fin"></div>
         <div style="color: gray; font-size: 25px;">남았습니다</div>
@@ -35,7 +36,7 @@
 <script>
     setTimeout(function(){
         location.reload();
-    },60000);
+    },600000);
 
     var now = new Date(); //현재시간을 구한다.
     var d = now.getDate()

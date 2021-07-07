@@ -33,10 +33,10 @@
          console.log("hi");
          abc = new Date();
          console.log(abc);
-         document.getElementById("second_fin").innerHTML = String(abc.getHours()) + ':';
-         document.getElementById("second_fin").innerHTML += String(abc.getMinutes()) + ':';
-         document.getElementById("second_fin").innerHTML += String(abc.getSeconds()) + '.';
-         document.getElementById("second_fin").innerHTML += String(abc.getMilliseconds());
+         document.getElementById("second_fin").innerHTML = String(abc.getHours()).padStart(2,'0') + ':';
+         document.getElementById("second_fin").innerHTML += String(abc.getMinutes()).padStart(2,'0') + ':';
+         document.getElementById("second_fin").innerHTML += String(abc.getSeconds()).padStart(2,'0') + '.';
+         document.getElementById("second_fin").innerHTML += String(abc.getMilliseconds()).padStart(3,'0');
      },1);
      
      setTimeout(function(){

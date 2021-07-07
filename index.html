@@ -23,7 +23,9 @@
  <script>
      var abc;
      setTimeout(function(){
+         console.log("hi");
          abc = new Date();
+         console.log(abc);
          document.getElementById("second_fin").innerHTML = String(abc.getHours()) + ':';
          document.getElementById("second_fin").innerHTML += String(abc.getMinutes()) + ':';
          document.getElementById("second_fin").innerHTML += String(abc.getSeconds()) + '.';

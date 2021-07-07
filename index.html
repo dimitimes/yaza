@@ -21,65 +21,72 @@
         <a style="color: rgb(244, 11, 126); font-size 40px;" id="second_fin">0시간 0분 0초</a><br>
         <a style="color: gray; font-size: 25px;">남았습니다</a><br>
  <script>
-    setTimeout(function(){
-        location.reload();
-    },300000);
+     var abc = Date.now();
+     abc.getMilliseconds()
+     
+     document.getElementById(id).innerHTML = abc.getHours() + ':';
+     document.getElementById(id).innerHTML += abc.getMinutes() + ':';
+     document.getElementById(id).innerHTML += abc.getSeconds() + '.';
+     document.getElementById(id).innerHTML += abc.getMilliseconds();
+//     setTimeout(function(){
+//         location.reload();
+//     },300000);
 
-    var now = new Date(); //현재시간을 구한다.
-    var d = now.getDate()
-    var m = now.getMonth()
-    var y = now.getFullYear()
-    m = m + 1;
-    if (m < 10) {
-  	m = "0" + m;
-    }
+//     var now = new Date(); //현재시간을 구한다.
+//     var d = now.getDate()
+//     var m = now.getMonth()
+//     var y = now.getFullYear()
+//     m = m + 1;
+//     if (m < 10) {
+//   	m = "0" + m;
+//     }
   
-    if (d < 10) {
-  	d = "0" + d;
-    }
+//     if (d < 10) {
+//   	d = "0" + d;
+//     }
 
-var start = m + "/" + d + "/" + y + " " + "10:20:27"
-var firsts = m + "/" + d + "/" + y + " " + "20:20:27"
-var second = m + "/" + d + "/" + y + " " + "21:10:27"
-var third = m + "/" + d + "/" + y + " " + "01:50:00"
+// var start = m + "/" + d + "/" + y + " " + "10:20:27"
+// var firsts = m + "/" + d + "/" + y + " " + "20:20:27"
+// var second = m + "/" + d + "/" + y + " " + "21:10:27"
+// var third = m + "/" + d + "/" + y + " " + "01:50:00"
 
-CountDownTimer(start, 'first_start');
-CountDownTimer(firsts, 'first_okay');
-CountDownTimer(second, 'first_fin');
-CountDownTimer(third, 'second_fin');
+// CountDownTimer(start, 'first_start');
+// CountDownTimer(firsts, 'first_okay');
+// CountDownTimer(second, 'first_fin');
+// CountDownTimer(third, 'second_fin');
 
-function CountDownTimer(dt, id)
-{
-var end = new Date(dt);
+// function CountDownTimer(dt, id)
+// {
+// var end = new Date(dt);
 
-var _second = 1000;
-var _minute = _second * 60;
-var _hour = _minute * 60;
-var _day = _hour * 24;
-var timer;
+// var _second = 1000;
+// var _minute = _second * 60;
+// var _hour = _minute * 60;
+// var _day = _hour * 24;
+// var timer;
 
-function showRemaining() {
-var now = new Date();
-var distance = end - now;
-if (distance < 0) {
+// function showRemaining() {
+// var now = new Date();
+// var distance = end - now;
+// if (distance < 0) {
 
-clearInterval(timer);
-document.getElementById(id).innerHTML = '완료된 타이머입니다.';
+// clearInterval(timer);
+// document.getElementById(id).innerHTML = '완료된 타이머입니다.';
 
-return;
-}
-var days = Math.floor(distance / _day);
-var hours = Math.floor((distance % _day) / _hour);
-var minutes = Math.floor((distance % _hour) / _minute);
-var seconds = Math.floor((distance % _minute) / _second);
+// return;
+// }
+// var days = Math.floor(distance / _day);
+// var hours = Math.floor((distance % _day) / _hour);
+// var minutes = Math.floor((distance % _hour) / _minute);
+// var seconds = Math.floor((distance % _minute) / _second);
 
-document.getElementById(id).innerHTML = hours + '시간 ';
-document.getElementById(id).innerHTML += minutes + '분 ';
-document.getElementById(id).innerHTML += seconds + '초';
-}
+// document.getElementById(id).innerHTML = hours + '시간 ';
+// document.getElementById(id).innerHTML += minutes + '분 ';
+// document.getElementById(id).innerHTML += seconds + '초';
+// }
 
-timer = setInterval(showRemaining, 1000);
-}
+// timer = setInterval(showRemaining, 1000);
+// }
 </script>
 
     </body>

@@ -23,7 +23,7 @@
  <script>
      var abc;
      setTimeout(function(){
-         abc = Date.now();
+         abc = new Date();
          document.getElementById("second_fin").innerHTML = String(abc.getHours()) + ':';
          document.getElementById("second_fin").innerHTML += String(abc.getMinutes()) + ':';
          document.getElementById("second_fin").innerHTML += String(abc.getSeconds()) + '.';

@@ -23,10 +23,10 @@
  <script>
      var abc = Date.now();
      setTimeout(function(){
-         document.getElementById("second_fin").innerHTML = abc.getHours() + ':';
-         document.getElementById("second_fin").innerHTML += abc.getMinutes() + ':';
-         document.getElementById("second_fin").innerHTML += abc.getSeconds() + '.';
-         document.getElementById("second_fin").innerHTML += abc.getMilliseconds();
+         document.getElementById("second_fin").innerHTML = String(abc.getHours()) + ':';
+         document.getElementById("second_fin").innerHTML += String(abc.getMinutes()) + ':';
+         document.getElementById("second_fin").innerHTML += String(abc.getSeconds()) + '.';
+         document.getElementById("second_fin").innerHTML += String(abc.getMilliseconds());
      },1000);
      
      setTimeout(function(){

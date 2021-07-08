@@ -7,12 +7,13 @@
 /*             @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&family=Song+Myung&display=swap'); */
             body {
                 text-align: center;
+                background-color: black;
             }
             a {
                 text-align: center;
-                font-size: 50px;
+                font-size: 40px;
                 font-family: 'Noto Sans KR', sans-serif;
-                color: gray;
+                color: rgb(255, 179, 249);
                 padding: 0px;
                 margin: 0px;
             }
@@ -21,7 +22,7 @@
 /*                 font-family: 'Song Myung', serif; */
                 text-align: center;
                 font-size: 50px;
-                color: black;
+                color: white;
                 padding: 0px;
                 margin: 0px;
             }
@@ -30,7 +31,7 @@
     <body>
         <br><br><br><br>
 <!--         <a style="color: black; font-size: 25px;">심자 종료 시간까지</a><br> -->
-        <a style="color: rgb(244, 11, 116); font-size 40px;" id="second_fin">00:00:00.000000</a><br><br>
+        <a id="second_fin">00:00:00.000000</a><br><br>
 <!--         <p style="font-size: 30px;">Whoso neglects learning in his youth,</p> -->
 <!--         <p style="font-size: 30px;">Loses the past and is dead for the future.</p> -->
         <p style="font-size: 50px;">No pain, No gain</p>
@@ -50,7 +51,7 @@
      
      setTimeout(function(){
         location.reload();
-    },300000);
+    },60000);
 
 //     var now = new Date(); //현재시간을 구한다.
 //     var d = now.getDate()
